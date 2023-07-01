@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-wdith,initial-scale=1.0">
+        <title>Personal website</title>
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" media="screen and (max-width:800px)" href="table.css">
+        <link rel="stylesheet" media="screen and (max-width:530px)" href="phone.css">
+        </head>
+        <body>
+            
+                <nav class="navbar">
+                    <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#qualification">Qualification</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#photogallery">Photo Gallery</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+                </nav>
+            <section id="home">
+                <div class="main">
+                    <h1 class="headings">Hi , I'm  <br>CAROL  DSOUZA.<br>Computer Science Engineer</h1>
+                  
+                </div>
+            </section>
+            <section id="about">
+                <h1 class="headings">ABOUT ME </h1>
+                <div id="pic">
+                    <img src="images/img2.jpg" alt="">
+                    <div id="intro">
+                       
+                       <p>Hello, I'm Carol Dsouza.</p>
+                    <p>I'm an introverted individual with good communication skills.I am pursuing my Bachelor's degree in Computer Science Engineering.</p>
+                    <p>In my free time,you will find me indulging in my interests and hobbies.I enjoy drawing, where I find joy in expressing my creativity and bringing ideas to life through sketches and illustration.</p>
+                    <p>My soft skills include my communication and good teamwork with problem solving skills and technical skills include basics of C, C++, Python, HTML and CSS </p>
+                </div>
+                </div>
+            </section>
+            <section id="qualification">
+                <h1 class="headings">QUALIFICATION </h1>
+                <div id="pic">
+                    <img src="images/img3.jpg" alt=""> 
+                    <div id="intro">
+                        <p><strong>DEGREE:3rd year Computer Science and Engineering</strong></p>
+                        <p>College name: St.Joseph Engineering College</p>
+                        
+                        <p>CGPA: 8.75</p>
+                        <p>Location: Mangalore</p>
+                        <p><strong>2nd PUC</strong></p>
+                            <p>College name: Vidyodaya PU College</p>
+                            <p>Percentage: 90</p>
+                            <p>Location: Udupi</p>
+                        <p><strong>SSLC</strong></p>
+                            <p>School name: St Cecily's High School</p>
+                            <p>Percentage: 93.56</p>
+                        <p>Location: Udupi</p>
+                        
+                    </div>
+                </div>
+            </section>
+            <section id="hobbies">
+                <h1 class="headings">HOBBIES</h1>
+                <div class="hobbies">
+                    <figure class="hobbies">
+                   <img src="images/key.png" alt="Playing Keyboard">
+                        <img src="images/air.jpg" alt="Airport">
+                        <img src="images/mov.jpg" alt="Watching Movies">
+                        <img src="images/dd.jpg" alt="Drawing">
+                    </figure>
+            </div>
+            </section>
+            <section id="photogallery">
+                <h1 class="headings">PHOTO GALLERY </h1>
+                <div class="gallery">
+
+                     <img src="images/img14.jpeg" alt=""> 
+                    <img src="images/img15.jpeg" alt=""> 
+                    <img src="images/img11.jpeg" alt="">
+                    <img src="images/img12.jpeg" alt="">
+                    <img src="images/img9.jpeg" alt="">
+                    <img src="images/img10.jpeg" alt="">
+                    <!-- <div class="row">
+                        <div class="box">
+                            <img src="gallery/img4.jpg" alt="">
+                            <h1 class="headings"> </h1>
+                            <p></p>
+                        </div>
+                        <div class="box">
+                            <img src="gallery/img5.jpeg" alt="">
+                            <h1 class="headings"> </h1>
+                            <p></p>
+                        </div>
+                        <div class="box">
+                            <img src="gallery/img6.jpeg" alt="">
+                            <h1 class="headings"> </h1>
+                            <p></p>
+                        </div> -->
+                    <!-- </div> -->
+    
+                </div>
+            </section>
+            
+            <section id="contact">
+                <h1 class="headings">CONTACT PAGE</h1>
+                <form action="" class="form">
+                    <input type="text" name="name" class="input" placeholder="Enter Your Name">
+                    <input type="email" name="email" class="input" placeholder="Enter your email">
+                    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter your Message"></textarea>
+                    <input type="submit" value="SEND" id="send">
+                </form>
+            </section>
+            <script>
+                // Retrieve the current visit count from local storage
+                let visitCount = localStorage.getItem('visitCount');
+              
+                // Check if visitCount exists in local storage
+                if (!visitCount) {
+                  // Set initial visit count to 1 if it doesn't exist
+                  visitCount = 1;
+                } else {
+                  // Increment the visit count if it exists
+                  visitCount = parseInt(visitCount) + 1;
+                }
+              
+                // Update the visit count in local storage
+                localStorage.setItem('visitCount', visitCount);
+              
+                // Display the visit count on the page
+                document.write('Page visits: ' + visitCount);
+                
+              </script>
+            <script>
+            function showdate(){
+            var d=new Date();
+            var h=d.getHours();
+            var m=d.getMinutes(); 
+            var s=d.getSeconds();
+            document.getElementById("client-date").innerHTML=(h+":"+m+":"+s);
+            setTimeout(showdate, 1000);
+            }
+            </script> </head>
+            <body onload="showdate()">
+            <div id="client-date"></div>
+            <?php
+            date_default_timezone_set("Asia/kolkata");
+            echo "The time is " . date("h:i:sa");
+            ?>
+        </section>
+           </body>
+</html>
